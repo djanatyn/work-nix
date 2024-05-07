@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [ ./hardware-configuration.nix ];
@@ -36,8 +41,14 @@
 
   users.users.jstrickland = {
     isNormalUser = true;
-    extraGroups =
-      [ "wheel" "networkmanager" "docker" "video" "audio" "plugdev" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "docker"
+      "video"
+      "audio"
+      "plugdev"
+    ];
     shell = "${pkgs.zsh}/bin/zsh";
   };
 
@@ -46,7 +57,11 @@
     pulseaudio.enable = true;
     bluetooth = {
       enable = true;
-      settings = { General = { ControllerMode = "bredr"; }; };
+      settings = {
+        General = {
+          ControllerMode = "bredr";
+        };
+      };
     };
     ipu6 = {
       enable = true;
@@ -237,5 +252,6 @@
     '';
     openssh.enable = true;
     tailscale.enable = true;
+    kolide-launcher.enable = true;
   };
 }
