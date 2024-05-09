@@ -21,6 +21,22 @@
         "type": "github"
       }
     },
+    "mercury": {
+      "locked": {
+        "lastModified": 1709325818,
+        "narHash": "sha256-XKLPomwk37pjkgchzuseDqWOhOFPDm4CFeA/DcTDjlU=",
+        "ref": "main",
+        "rev": "4773cd2e6f7dd35e3a39305195a67ef6e3c471e7",
+        "revCount": 60,
+        "type": "git",
+        "url": "ssh://git@github.com/mercurytechnologies/nixos-configuration.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/mercurytechnologies/nixos-configuration.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1714906307,
@@ -40,6 +56,7 @@
     "root": {
       "inputs": {
         "kolide-launcher": "kolide-launcher",
+        "mercury": "mercury",
         "nixpkgs": "nixpkgs"
       }
     }

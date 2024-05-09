@@ -8,6 +8,17 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
+  mercury = {
+    # Enable the CA cert used for internal resources
+    internalCertificateAuthority.enable = true;
+
+    # Enable services required for MWB development (Postgres)
+    mwbDevelopment.enable = true;
+
+    # Enable the internal Nix cache
+    nixCache.enable = true;
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices = {
