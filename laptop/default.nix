@@ -83,6 +83,8 @@
   system.stateVersion = "23.11"; # do not change
 
   environment.systemPackages = with pkgs; [
+    # work
+    slack
     # system
     zsh
     zplug
@@ -156,6 +158,7 @@
     # haskell
     haskellPackages.cabal-install
     ghc
+    haskell-language-server
     stack
     ormolu
     # file management
@@ -179,6 +182,8 @@
     # email
     isync
     notmuch
+    astroid
+    msmtp
     # editors
     emacs
     neovim
