@@ -38,6 +38,9 @@
   nix = {
     settings.sandbox = true;
     optimise.automatic = true;
+    extraOptions = ''
+      experimental-features = nix-command flakes repl-flake
+    '';
   };
 
   time.timeZone = "America/New_York";
