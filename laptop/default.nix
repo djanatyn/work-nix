@@ -38,9 +38,6 @@
   nix = {
     settings.sandbox = true;
     optimise.automatic = true;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
   };
 
   time.timeZone = "America/New_York";
@@ -63,7 +60,6 @@
     shell = "${pkgs.zsh}/bin/zsh";
   };
 
-  sound.enable = true;
   hardware = {
     pulseaudio.enable = true;
     bluetooth = {
@@ -121,7 +117,7 @@
     # calculator
     fend
     # visualization
-    visidata
+    # visidata (olm dependency?)
     graphviz
     # shell
     tmux
